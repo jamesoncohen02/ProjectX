@@ -1,0 +1,30 @@
+<%-include('../partials/header', {page_title:"Signup Details for signup.StudentName"})-%>
+<%-include('../partials/navbar')-%>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h4>Current Signup Details for <%=signup.StudentName%></h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>You are currently signed up for Ad Hoc and Lunch in Room <b><%=signup.Room%>.</b></p>
+      <form action="/signup/<%=signupId%>/editSignup" method="GET">
+        <button>Edit Room Signup</button>
+      </form><br>
+      <form action="/signup/<%=signupId%>?_method=DELETE" method="POST">
+        <button>Delete Room Signup</button>
+      </form><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <br>
+      <p><a href="../signup/userSelect">Return to Select User Page</a></p>
+    </div>
+  </div>
+</div>
+
+
+<%-include('../partials/footer')-%>

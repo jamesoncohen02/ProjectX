@@ -1,0 +1,32 @@
+<%-include('../partials/header', {page_title:"Edit Room " + room.number})-%>
+<%-include('../partials/navbar')-%>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-12">
+  <h4>Edit Room <%=room.number%></h4>
+</div>
+</div>
+<div class="row">
+  <div class="col-12">
+  <form action="/room/<%=room.id%>?_method=PUT" method="POST">
+    <label for="User">Which user are you?</label><br>
+    <select name="User" id="User" required>
+    <option disabled selected value> -- Select a User -- </option>
+    <%for (user of Object.values(users)){%>
+    <option value="<%=user.username%>"><%=user.name%></option>
+    <%}%>
+  </select><br><br>
+  <p style="margin-bottom:5px;">Would you like this room to be available?</p>
+  <input type="radio" id="yes" name="Available" value="Yes" required>
+  <label for="yes">Yes</label><br>
+  <input type="radio" id="no" name="Available" value="No">
+  <label for="no">No</label><br><br>
+  <label for="maxCapacity">What would you like the maximum capacity of this room to be?</label><br>
+  <input type="number" id="maxCapacity" name="maxCapacity" placeholder="Enter a number" required><br><br>
+  <button>Update Room</button>
+  </form>
+</div>
+</div>
+</div>
+
+<%-include('../partials/footer')-%>

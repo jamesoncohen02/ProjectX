@@ -1,0 +1,20 @@
+<%-include('../partials/header', {page_title:"Select User"})-%>
+<%-include('../partials/navbar')-%>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <label for="user">Which user are you?</label>
+      <form action="../user" method="get">
+        <select name="user" id="user" required>
+          <%for (user of Object.values(users)){%>
+            <option value="<%=user.username%>"><%=user.name%></option>
+          <%}%>
+        </select>
+        <input type="submit" value="See User Details">
+      </form>
+    </div>
+    </div>
+    </div>
+
+<%-include('../partials/footer')-%>

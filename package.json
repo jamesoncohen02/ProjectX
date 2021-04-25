@@ -1,0 +1,22 @@
+{
+  "name": "TrinCovidCalendar",
+  "version": "1.0.0",
+  "description": "A project/website intended to make scheduling Lunch and Ad Hoc and contact tracing simpler for on-campus students and administrative staff at Trinity.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jameson Cohen",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.0.10",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.6.0",
+    "fs": "0.0.1-security",
+    "googleapis": "^39.2.0",
+    "method-override": "^3.0.0",
+    "request": "^2.88.2"
+  }
+}

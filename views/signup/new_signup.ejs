@@ -1,0 +1,32 @@
+<%-include('../partials/header', {page_title:"Signup for a Room"})-%>
+<%-include('../partials/navbar')-%>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-12">
+  <h4>Signup for an Ad Hoc/Lunch Room for the Week</h4>
+</div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <form action="/signup" method="post">
+      <label for="user">Which user are you?</label><br>
+      <select name="user" id="user" required>
+        <%for (user of Object.values(users)){%>
+          <%if(user.type == "student"){%>
+          <option value="<%=user.username%>"><%=user.name%></option>
+        <%}}%>
+      </select><br><br>
+      <label for="room">What room would you like to sign up for?</label><br>
+      <select name="room" id="room" required>
+        <%for (room of Object.values(rooms)){%>
+          <option value="<%=room.number.split(" ").join("-")%>"><%=room.number%></option>
+        <%}%>
+      </select><br><br>
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+  </div>
+</div>
+
+<%-include('../partials/footer')-%>

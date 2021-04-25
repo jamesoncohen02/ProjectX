@@ -1,0 +1,29 @@
+<%-include('../partials/header', {page_title:"All Rooms"})-%>
+<%-include('../partials/navbar')-%>
+
+<div class="row">
+  <% Object.keys(rooms).forEach(function(key, i){%>
+    <div class="col-4" align="center">
+      <b>Room: <%=rooms[key].number%></b>
+      <%if(rooms[key].available){%>
+        <p style="margin-bottom:0px;"><i>Available</i></p>
+        <%}%>
+      <%if (!rooms[key].available){%>
+        <p style="margin-bottom:0px"><i>Not Available</i></p>
+      <%}%>
+      <p style="margin-bottom:0px;">Max Capacity: <%=rooms[key].maxCapacity%></p>
+      <p style="margin-bottom:0px;">Students Signed Up: <small>
+        <%for (let i = 0; i<(rooms[key].studentsSignedUp.length-1); i++){%>
+          <%=rooms[key].studentsSignedUp[i] + ", "%>
+        <%}%>
+        <%=rooms[key].studentsSignedUp[(rooms[key].studentsSignedUp.length-1)]%>
+    </small></p>
+    <form action="/room/<%= key %>/editRoom" method="GET">
+      <button>Edit Room Availability/Capacity</button>
+    </form><br>
+    </div>
+  <%})%>
+
+</div>
+
+<%-include('../partials/footer')-%>

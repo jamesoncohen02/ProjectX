@@ -1,0 +1,26 @@
+<%-include('../partials/header', {page_title:"Edit Signup"})-%>
+<%-include('../partials/navbar')-%>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-12">
+  <h4>Edit Your Current Signup for Room <%=signup.Room%></h4>
+</div>
+</div>
+<div class="row">
+  <div class="col-12">
+  <form action="/signup/<%=signupId%>?_method=PUT" method="POST">
+  <label for="Room">What room would you like to change your signup to for Ad Hoc and Lunch?</label><br>
+  <select name="Room" id="Room" required>
+  <option disabled selected value> -- Select a Room -- </option>
+  <%for (room of Object.values(rooms)){%>
+  <option value="<%=room.number.split(" ").join("-")%>"><%=room.number%></option>
+  <%}%>
+</select><br><br>
+<button>Update Room</button>
+</form><br><br>
+</div>
+</div>
+</div>
+
+<%-include('../partials/footer')-%>
