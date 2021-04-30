@@ -4,7 +4,7 @@ let ejs = require('ejs');
 let methodOverride = require('method-override');
 
 let admin = require("firebase-admin");
-let serviceAccount = require("./firebase-config.json");
+let serviceAccount = require("/firebase-config.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)

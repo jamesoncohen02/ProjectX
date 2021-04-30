@@ -4,25 +4,6 @@ const {google} = require('googleapis');
 const keys = require('../client-secret.json');
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC"];
 
-/*const client = new google.auth.JWT(
-  keys.client_email,
-  null,
-  keys.private_key,
-  ['https://www.googleapis.com/auth/spreadsheets']
-);
-
-client.authorize(function(err, tokens){
-  if (err){
-    console.log(err);
-    return;
-  } else{
-    console.log('Connected');
-    gsrun(client);
-  }
-});
-
-const gsapi = google.sheets({version:'v4', auth:client});*/
-
 exports.getAllSignups = async function(){
   let allSignups = {};
 
