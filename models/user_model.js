@@ -1,13 +1,26 @@
-var fs = require('fs');
+let admin = require("firebase-admin");
+let db = admin.firestore();
 
-exports.getAllUsers = function(){
-  var userData = fs.readFileSync('data/user.json', 'utf8');
-  return JSON.parse(userData);
-}
+exports.getAllUsers = async function(){
+  let allUsers = {};
+  try{
+    let users = await db.collection('users').get();
+    for (let user of users.docs) {
+      allUsers[user.id] = user.data();
+    }
+    return allUsers;
+  } catch (err) {
+    console.log("Error getting documents", err);
+  }
+};
 
-exports.getUser = function(username){
-  var userData = exports.getAllUsers();
+exports.getUser = async function(username){
+  try{
+  let userData = await exports.getAllUsers();
   if (userData[username]) {return userData[username];}
 
   return {};
+}catch(err){
+  console.log(err);
 }
+};

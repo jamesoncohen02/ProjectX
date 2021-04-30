@@ -1,7 +1,14 @@
-var express = require('express');
-var app = express();
-var ejs = require('ejs');
-var methodOverride = require('method-override');
+let express = require('express');
+let app = express();
+let ejs = require('ejs');
+let methodOverride = require('method-override');
+
+let admin = require("firebase-admin");
+let serviceAccount = require("./firebase-config.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -15,5 +22,5 @@ app.use(require('./controllers/signup_controller'));
 
 const port = process.env.PORT || 3000;
 app.listen(port, function(){
-	console.log('listening on port:'+port+'!')
+	console.log('listening on port:'+port+'!');
 });

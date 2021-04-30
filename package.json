@@ -3,19 +3,42 @@
   "version": "1.0.0",
   "description": "A project/website intended to make scheduling Lunch and Ad Hoc and contact tracing simpler for on-campus students and administrative staff at Trinity.",
   "main": "server.js",
+  "jshintConfig": {
+    "curly": true,
+    "eqeqeq": true,
+    "undef": true,
+    "unused": false,
+    "varstmt": true,
+    "devel": true,
+    "browser": true,
+    "esversion": 8,
+    "globals": {
+      "require": false,
+      "module": false,
+      "exports": false,
+      "process": false
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "compile:css": "./node_modules/less/bin/lessc ./public/LESS/styles.less ./public/css/styles.css",
+    "lint:controllers": "node ./node_modules/jshint/bin/jshint ./controllers/*.js",
+    "lint:models": "node ./node_modules/jshint/bin/jshint ./models/*.js",
+    "lint:server": "node ./node_modules/jshint/bin/jshint server.js",
+    "lint": "npm run lint:controllers && npm run lint:models && npm run lint:server",
+    "build": "npm run compile:css && npm run lint"
   },
   "author": "Jameson Cohen",
   "license": "ISC",
   "dependencies": {
     "alert": "^5.0.10",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "firebase-admin": "^9.6.0",
-    "fs": "0.0.1-security",
+    "google-spreadsheet": "^3.1.15",
     "googleapis": "^39.2.0",
+    "jshint": "^2.12.0",
+    "less": "^4.1.1",
     "method-override": "^3.0.0",
     "request": "^2.88.2"
   }

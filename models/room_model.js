@@ -1,13 +1,5 @@
-var admin = require("firebase-admin");
-var fs = require('fs');
-var serviceAccount = require("../firebase-config.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-var db = admin.firestore();
-
+let admin = require("firebase-admin");
+let db = admin.firestore();
 
 exports.getAllRooms = async function() {
   //var roomData = fs.readFileSync('data/room.json', 'utf8');
@@ -16,31 +8,31 @@ exports.getAllRooms = async function() {
   try {
     let rooms = await db.collection('rooms').get();
 
-    for (room of rooms.docs) {
+    for (let room of rooms.docs) {
       allRooms[room.id] = room.data();
-    };
+    }
     return allRooms;
   } catch (err) {
     console.log("Error getting documents", err);
   }
   //return JSON.parse(roomData);
-}
+};
 
 exports.getRoom = async function(id) {
   try{
-  var roomData = await exports.getAllRooms();
+  let roomData = await exports.getAllRooms();
 
-  if (roomData[id]) return roomData[id];
+  if (roomData[id]) {return roomData[id];}
   console.log(roomData[id]);
 
   return {};
 } catch (err){
   console.log(err);
 }
-}
+};
 
 exports.updateRoom = async function(id, roomData) {
-  var newRoomData = await exports.getAllRooms();
+  let newRoomData = await exports.getAllRooms();
   newRoomData[id] = roomData;
 
   for (let room of Object.entries(newRoomData)){
@@ -52,5 +44,4 @@ exports.updateRoom = async function(id, roomData) {
       "studentsSignedUp": room[1].studentsSignedUp
     });
   }
-  //fs.writeFileSync('data/room.json', JSON.stringify(newRoomData))
-}
+};
