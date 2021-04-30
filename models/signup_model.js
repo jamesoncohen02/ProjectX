@@ -141,7 +141,7 @@ exports.addSignup = async function(username, room){
       let col = await gsapi.spreadsheets.values.get({spreadsheetId: '1arZIycfuj_6mp2A_DtawfoE6_vKmjxnI92G4zXoF84E',range: 'Signups!' + letters[i] + ":" + letters[i]});
       let lastRow = col.data.values.length;
       addOpt.range = 'Signups!'+letters[i]+(lastRow+1);
-      addOpt.resource = {majorDimension: 'COLUMNS', values: [[users[username].name]]}
+      addOpt.resource = {majorDimension: 'COLUMNS', values: [[users[username].name]]};
     }
   }
   let res = await gsapi.spreadsheets.values.update(addOpt);
@@ -156,7 +156,7 @@ exports.updateSignup = async function(signupId, newRoom){
   let username = splitId[0];
   let studentName = users[username].name;
   let oldRoom = splitId[1];
-  let roomName = oldRoom.split('-').join(' ')
+  let roomName = oldRoom.split('-').join(' ');
   exports.addSignup(username, newRoom);
 };
 
@@ -167,7 +167,7 @@ exports.deleteSignup = async function(signupId){
   let username = splitId[0];
   let studentName = users[username].name;
   let oldRoom = splitId[1];
-  let roomName = oldRoom.split('-').join(' ')
+  let roomName = oldRoom.split('-').join(' ');
 
   try{
   await db.collection('signups').doc(signupId).delete();

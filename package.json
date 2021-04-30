@@ -5,7 +5,7 @@
   "main": "server.js",
   "jshintConfig": {
     "curly": true,
-    "eqeqeq": true,
+    "eqeqeq": false,
     "undef": true,
     "unused": false,
     "varstmt": true,
