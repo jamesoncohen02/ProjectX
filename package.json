@@ -19,6 +19,9 @@
       "process": false
     }
   },
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "compile:css": "./node_modules/less/bin/lessc ./public/LESS/styles.less ./public/css/styles.css",
     "lint:controllers": "node ./node_modules/jshint/bin/jshint ./controllers/*.js",
