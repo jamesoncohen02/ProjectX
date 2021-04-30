@@ -20,7 +20,7 @@ app.use(require('./controllers/room_controller'));
 app.use(require('./controllers/user_controller'));
 app.use(require('./controllers/signup_controller'));
 
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 app.listen(port, function(){
 	console.log('listening on port:'+port+'!');
 });
