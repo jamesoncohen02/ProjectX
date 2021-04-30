@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "trincovidcal",
+  "private_key_id": "e86849442227cec6032c0cf0425792ca8d9ea97a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDCXKUrFO5mMFUd\nry8bqGwxETuOaq416Ggvpao6IZezcGViegwuq+EXAzkpBD0yVyrR9ZUz0VC+Lf3C\nfFQXk99BTHj6HVpxe5zzOiy2i6GZCGst5Typxi7zIhrojVBQGyUulWq8FTVRXrCF\n8gCp/pH1+MXWIQUZZ626gRcLO6bJICoS5t9ZIjtzTgldKEoFhau2gmkkUMiUQoSn\nUmDWs2107smvC8aMHc+Vt0+VAbCU2nWUUv+T8Rxq9fzzDgLfa4relHLsNLL068MU\n/ryAeImGCZ6ZPmaoQygI4U5EHGD4nUleGO7RQ/fnuPbX1q41WYW2uEAeXeOk+Zp6\no3tTIZ9RAgMBAAECggEACxOqmhz0RUCl6S4tuh7MI7O+uCweR5Y6MdT4MZ3uflx+\nerFH9nT3PA+D93F1Z2QOXa7oVO6t8li+qJHbXQihZaBNGLwJhoQr+rSrDbBBgm43\nZYM2BNr1nAeqjuxW0mnpoZEEZzmyMzP5TXjwTr/iY6lM5Ro2py8AeKuYu5wnsjiY\ngzHiiQxvNhPSK6BcuP/3FXODf+MP4MM6YJk5ohkul6vXUOdZ7LhbmKorDQXwznW/\nNFJMvNgOBiaZ0NJQMyFM7FkJ9Cc+oyIP8EAew+TZ1pvTMx/pqCXEtQKh0kPCkCJr\nSo5YNRsG3D/0hFX0uPFQxEaL4PSVrMvzdErG8xFMEQKBgQD1NTq+AY82uwHUe5k3\niMgovA4ht1VraB9FIfKts0Z2hXNBrN3GyHDP22sBb26O31ytEf1kLoeUqpdVMRWP\nQTVGzm1O+rnxTmfzQZcCP+3OotjTeXt9cKO0BINyzclakBELBCNvGRVnm348j83y\nGUb+MjiN6Cu1AkUJGQA6tVg8PQKBgQDK6ofkAKqlr+75W2NRucNU9XpzeFI4pvSh\nekwmVVYGTHZ1y00g3Vv2RH4V3JRO/KrWaxCDiLmYUwEZcB+5XLigevEtmCg/ZaCY\nFKbrzmETV5iT0KhVByKmenBxgVHNmGP7HVNHaqVqcbvf4+6d493F2WZBxTV/Wbwo\nomSW6368pQKBgQDNSidH9F5GYAKENoZsLCQHlonuSGNHbQDhDC70pecUS13XWjbC\nugVYwEayCOzyyKX6b9lJCnuQR9IzDMkUCm/kO+bf/KG4GQCGdB9NTuB143jMdCSj\nPK6RhEXY09kD7SGXq3tPBB0bhN8HLQ4q5ma9YqZeiEYvYRsTJs8+V5zrsQKBgQCK\nQHkN05ZxBQmhQ67Lw/FeNVKU0enTR41tZ9HyXDocWIRthXKrbaZ2h/wQERXLK0OK\ni6/YrpMlQYiCOG6k8JOqY5lnI0Bo0Wk1tPx1tUtWzlvaelP2esIVA18RNrbxiV61\nfSl8gyDpAUysIrQ1R0eWwaR2M1NbzVvxo5M9cH4NMQKBgQC4/JiKwqIZ4qrCZrQb\nzZWEc1uH4YETD8xFe9eXxOnQkL1h4Q+9gkO4wqU6v26mIkgJwTxeEyBKac2ISXdM\nnOvJpE7R7sE+PCnEsJ7a1BZaXcBYceDpa7KuDfDvF9d7o+BnvJYA7dgys7wlwBcY\nLmXq6XSWeVgYtf3pGzjfE7NhTg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-95mbz@trincovidcal.iam.gserviceaccount.com",
+  "client_id": "103915596809166945208",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-95mbz%40trincovidcal.iam.gserviceaccount.com"
+}
