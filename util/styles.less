@@ -1,10 +1,32 @@
 @background-yellow: #F8F7A7;
+@navbar-color: lighten(#89C0E8, 15%);
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 
 body{
-  background-color: @gray-background;
+  background-color: @background-yellow;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: bold;
+}
+
+.navbar{
+  background-color: @navbar-color;
+
+}
+
+.navbar a{
+  color: #000000;
+}
+
+.navbar a:hover {
+  background-color: lightgray;
+  color: white;
+}
+
+.footer{
+  background-color: @navbar-color;
+  color: #000000;
+  padding-top: 15px;
+  line-height: .5;
 }
