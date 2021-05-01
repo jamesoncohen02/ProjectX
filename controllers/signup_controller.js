@@ -82,7 +82,7 @@ router.get('/signup/:signupId', async function(req, res){
     alert("This user does not currently have any signups. If you would like to access signup details, you must first sign up for a room on the Sign Up for a Room page.");
     console.log("This user does not currently have any signups. If you would like to access signup details, you must first sign up for a room on the Sign Up for a Room page.");
     res.redirect("/signup/userSelect");
-    //res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Content-Type', 'text/html');
     res.render("error.ejs", {"errorCode":errorCode});
   }
 });

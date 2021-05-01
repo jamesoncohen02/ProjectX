@@ -17,7 +17,6 @@ exports.getAllSignups = async function(){
   } catch (err) {
     console.log("Error getting documents", err);
   }
-  //return JSON.parse(roomData);
 };
 
 exports.getSignup = async function(signupId){
@@ -232,28 +231,6 @@ exports.deleteSignup = async function(signupId){
         if(col.data.values[(j-1)][0] == users[username].name){
           let res = await gsapi.spreadsheets.values.clear({spreadsheetId: '1arZIycfuj_6mp2A_DtawfoE6_vKmjxnI92G4zXoF84E',range: 'Signups!' + letters[i] + j});
           console.log(res);
-          /*let res2 = await gsapi.spreadsheets.batchUpdate({
-            auth: client,
-            spreadsheetId: '1arZIycfuj_6mp2A_DtawfoE6_vKmjxnI92G4zXoF84E',
-            requestBody:{
-              requests:[
-                {
-                  cutPaste:{
-                    source:{
-                      sheetId: 0,
-                      startColumnIndex: (i+1),
-                      startRowIndex: (j+1),
-                      endRowIndex: lastRow
-                    },
-                    destination: {sheetId: 0, rowIndex: j},
-                    pasteType: "PASTE_NORMAL"
-                  }
-                }
-              ]
-            }
-          }, function(err, response){
-              if (err) console.log('API error: ' + err);
-          });*/
         }
       }
     }
